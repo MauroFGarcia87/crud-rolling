@@ -1,47 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario </title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adminstrador de Poductos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <main class="container bg-light py-1 my-3">
-        <section class="container bg-info py-3 my-5" >
-            <h2>Formulario de contacto</h2>
-        </section>
-        <section class="container">
-            <form>
-                <div class="mb-3">
-                    <label for="codigo" class="form-label">Codigo</label>
-                    <input type="text" class="form-control" id="codigo" aria-describedby="codigoeHelp" required>
-                </div>
-                <div class="mb-3">
-                    <label for="producto" class="form-label">Producto</label>
-                    <input type="text" class="form-control" id="producto" aria-describedby="apellidoeHelp">
-                </div>
-                <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="descripcion"></textarea>
-                    <label for="floatingTextarea">Descripcion</label>
-                  </div>
-                <div class="mb-3">
-                  <label for="cantidad" class="form-label">Cantidad</label>
-                  <input type="text" class="form-control" id="cantidad" placeholder="Ej:88">
-                  
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Url</label>
-                  <input type="text" class="form-control" id="url">
-                </div>
-                
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-        </section>
+      <section class="container bg-info py-3 my-5">
+        <h2 class="text-center">Administrador de Productos</h2>
+      </section>
+      <section class="container">
+        <h3 class="">Carga de producto</h3>
+        <hr />
+        <form id="formularioProducto">
+          <div class="mb-3">
+            <label for="codigo" class="form-label">Codigo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="codigo"
+              aria-describedby="codigoeHelp"
+              
+              
+            />
+            <div class="invalid-feedback">Este campo es incorrecto</div>
+          </div>
+          <div class="mb-3">
+            <label for="producto" class="form-label">Producto</label>
+            <input
+              type="text"
+              class="form-control"
+              id="producto"
+              aria-describedby="apellidoeHelp"
+              
+            />
+            <div class="invalid-feedback">Este campo es incorrecto</div>
+          </div>
+          <div class="form-floating">
+            <textarea
+              class="form-control"
+              placeholder="Leave a comment here"
+              id="descripcion"
+              
+            ></textarea>
+            <label for="floatingTextarea">Descripcion</label>
+            <div class="invalid-feedback">Este campo es incorrecto</div>
+          </div>
+          <div class="mb-3">
+            <label for="cantidad" class="form-label">Cantidad</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cantidad"
+              placeholder="Ej:88"
+              
+            />
+            <div class="invalid-feedback">Este campo es incorrecto</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Url</label>
+            <input type="text" class="form-control" id="url"  />
+            <div class="invalid-feedback">Este campo es incorrecto</div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <div class="alert alert-danger mt-2 d-none" role="alert" id="textAlerta">
+            Debe completar todos los campos marcados
+          </div>
+        </form>
+      </section>
     </main>
-   <script src="js/bootstrap.min.js"></script> 
-   <script src="js/app.js"></script>
-</body>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/validaciones.js"></script>
+  </body>
 </html>
