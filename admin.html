@@ -24,8 +24,6 @@
               class="form-control"
               id="codigo"
               aria-describedby="codigoeHelp"
-              
-              
             />
             <div class="invalid-feedback">Este campo es incorrecto</div>
           </div>
@@ -36,7 +34,6 @@
               class="form-control"
               id="producto"
               aria-describedby="apellidoeHelp"
-              
             />
             <div class="invalid-feedback">Este campo es incorrecto</div>
           </div>
@@ -45,7 +42,6 @@
               class="form-control"
               placeholder="Leave a comment here"
               id="descripcion"
-              
             ></textarea>
             <label for="floatingTextarea">Descripcion</label>
             <div class="invalid-feedback">Este campo es incorrecto</div>
@@ -57,21 +53,41 @@
               class="form-control"
               id="cantidad"
               placeholder="Ej:88"
-              
             />
             <div class="invalid-feedback">Este campo es incorrecto</div>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Url</label>
-            <input type="text" class="form-control" id="url"  />
+            <input type="text" class="form-control" id="url" />
             <div class="invalid-feedback">Este campo es incorrecto</div>
           </div>
 
           <button type="submit" class="btn btn-primary">Submit</button>
-          <div class="alert alert-danger mt-2 d-none" role="alert" id="textAlerta">
+          <div
+            class="alert alert-danger mt-2 d-none"
+            role="alert"
+            id="textAlerta"
+          >
             Debe completar todos los campos marcados
           </div>
         </form>
+      </section>
+      <section class="mt-5 container table-responsive">
+        <table class="table ">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Producto</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">URL</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tablaProducto">
+            
+          </tbody>
+        </table>
       </section>
     </main>
     <script src="js/bootstrap.min.js"></script>
