@@ -10,72 +10,107 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
-    <main class="container bg-light py-1 my-3">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">CRUD</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link "  href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="admin.html"
+                  >Admin</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container  py-1 my-3">
+     
       <section class="container bg-info py-3 my-5">
         <h2 class="text-center">Administrador de Productos</h2>
       </section>
       <section class="container">
-        <h3 class="">Carga de producto</h3>
-        <hr />
-        <form id="formularioProducto">
-          <div class="mb-3">
-            <label for="codigo" class="form-label">Codigo</label>
-            <input
-              type="text"
-              class="form-control"
-              id="codigo"
-              aria-describedby="codigoeHelp"
-            />
-            <div class="invalid-feedback">Este campo es incorrecto</div>
-          </div>
-          <div class="mb-3">
-            <label for="producto" class="form-label">Producto</label>
-            <input
-              type="text"
-              class="form-control"
-              id="producto"
-              aria-describedby="apellidoeHelp"
-            />
-            <div class="invalid-feedback">Este campo es incorrecto</div>
-          </div>
-          <div class="form-floating">
-            <textarea
-              class="form-control"
-              placeholder="Leave a comment here"
-              id="descripcion"
-            ></textarea>
-            <label for="floatingTextarea">Descripcion</label>
-            <div class="invalid-feedback">Este campo es incorrecto</div>
-          </div>
-          <div class="mb-3">
-            <label for="cantidad" class="form-label">Cantidad</label>
-            <input
-              type="text"
-              class="form-control"
-              id="cantidad"
-              placeholder="Ej:88"
-            />
-            <div class="invalid-feedback">Este campo es incorrecto</div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Url</label>
-            <input type="text" class="form-control" id="url" />
-            <div class="invalid-feedback">Este campo es incorrecto</div>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Guardar</button>
-          <div
-            class="alert alert-danger mt-2 d-none"
-            role="alert"
-            id="textAlerta"
-          >
-            Debe completar todos los campos marcados
-          </div>
-        </form>
+        
+        <div class="bg-light py-2">
+          <h3 class="mx-3 mt-3">Carga de producto</h3>
+          <hr />
+          <form id="formularioProducto">
+            <div class="mb-3">
+              <label for="codigo" class="form-label">Codigo</label>
+              <input
+                type="text"
+                class="form-control"
+                id="codigo"
+                aria-describedby="codigoeHelp"
+              />
+              <div class="invalid-feedback">Este campo es incorrecto</div>
+            </div>
+            <div class="mb-3">
+              <label for="producto" class="form-label">Producto</label>
+              <input
+                type="text"
+                class="form-control"
+                id="producto"
+                aria-describedby="apellidoeHelp"
+              />
+              <div class="invalid-feedback">Este campo es incorrecto</div>
+            </div>
+            <div class="form-floating">
+              <textarea
+                class="form-control"
+                placeholder="Leave a comment here"
+                id="descripcion"
+              ></textarea>
+              <label for="floatingTextarea">Descripcion</label>
+              <div class="invalid-feedback">Este campo es incorrecto</div>
+            </div>
+            <div class="mb-3">
+              <label for="cantidad" class="form-label">Cantidad</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cantidad"
+                placeholder="Ej:88"
+              />
+              <div class="invalid-feedback">Este campo es incorrecto</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Url</label>
+              <input type="text" class="form-control" id="url" />
+              <div class="invalid-feedback">Este campo es incorrecto</div>
+            </div>
+  
+            <button type="submit" class="btn btn-primary my-3">Guardar</button>
+            <div
+              class="alert alert-danger mt-2 d-none"
+              role="alert"
+              id="textAlerta"
+            >
+              Debe completar todos los campos marcados
+            </div>
+          </form>
+        </div>
+        
       </section>
-      <section class="mt-5">
+      <section class="mt-5 ">
         <button class="btn btn-primary" id="btnNuevoProducto">Producto Nuevo</button>
-        <section class="mt-5 container table-responsive">
+        <section class="mt-5 container table-responsive bg-light ">
           <table class="table ">
             <thead>
               <tr>
@@ -95,6 +130,7 @@
       </section>
       
     </main>
+    <footer></footer>
     <script src="js/bootstrap.min.js"></script>
     <script type="module" src="js/admin.js"></script>
   </body>
